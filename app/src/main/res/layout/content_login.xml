@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pathmilawk.minijobs.Login"
+    tools:showIn="@layout/activity_login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/background_login"
+        android:scaleType="fitXY"
+         />
+
+    <EditText
+        android:layout_width="260dp"
+        android:layout_height="34dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="@drawable/rounded_textfield"
+        android:hint="Email"
+        android:layout_marginTop="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/loginText"/>
+
+    <EditText
+        android:layout_width="260dp"
+        android:layout_height="34dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:background="@drawable/rounded_textfield"
+        android:hint="Password"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/loginText"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/button"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="17dp"
+        android:onClick="getHomeScreen"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Login to Mini Jobs!"
+        android:id="@+id/textView"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="38dp"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Not a member yet?"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:paddingLeft="50dp"
+        android:layout_marginTop="44dp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginbutton"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="33dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:clickable="false" />
+</RelativeLayout>

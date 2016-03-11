@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Ads">
+            <menu>
+                <item
+                    android:id="@+id/nav_all_ads_layout"
+                    android:icon="@drawable/ic_menu_search"
+                    android:title="All ads"
+                    android:state_activated="true"/>
+                <item
+                    android:id="@+id/nav_post_ad_layout"
+                    android:icon="@drawable/ic_menu_post"
+                    android:title="Post your ad"
+                    android:state_activated="true"/>
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="User Profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_profile_layout"
+                    android:icon="@drawable/ic_menu_profile"
+                    android:title="Profile"
+                    android:state_activated="true"/>
+                <item
+                    android:id="@+id/nav_my_ads_layout"
+                    android:icon="@drawable/ic_menu_ads"
+                    android:title="My Ads"
+                    android:state_activated="true"/>
+                <item
+                    android:id="@+id/nav_favourites_layout"
+                    android:icon="@drawable/ic_menu_favourites"
+                    android:title="Favourites"
+                    android:state_activated="true"/>
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_faq"
+                android:icon="@drawable/ic_menu_faq"
+                android:title="FAQ"
+                android:state_activated="true"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+    </group>
+</menu>
