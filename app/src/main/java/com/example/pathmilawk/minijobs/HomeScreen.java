@@ -82,14 +82,17 @@ public class HomeScreen extends AppCompatActivity
             fragmentManager.popBackStack();
             fragmentManager.beginTransaction().add(R.id.content_frame, new HomeFragment(), "homeFrag").addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_post_ad_layout) {
-
+            fragmentManager.popBackStack();
+            fragmentManager.beginTransaction().add(R.id.content_frame, new PostadFragment()).addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_profile_layout) {
             fragmentManager.popBackStack();
             fragmentManager.beginTransaction().add(R.id.content_frame, new ProfileFragment()).addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_my_ads_layout) {
-
+            fragmentManager.popBackStack();
+            fragmentManager.beginTransaction().add(R.id.content_frame, new MyadsFragment()).addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_favourites_layout) {
-
+            fragmentManager.popBackStack();
+            fragmentManager.beginTransaction().add(R.id.content_frame, new FavouritesFragment()).addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_faq) {
 
         }
