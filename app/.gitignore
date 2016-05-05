@@ -1,1 +1,3 @@
 /build
+.gitignore
+app/app.iml

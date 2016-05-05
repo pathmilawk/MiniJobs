@@ -1,6 +1,8 @@
 package com.example.pathmilawk.minijobs;
 
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+//import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,12 +18,15 @@ import android.view.MenuItem;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    FragmentManager fragmentManager=getFragmentManager();
+    FragmentManager fragmentManager=getSupportFragmentManager();
+    //FragmentManager fragmentManager2=getFragmentManager();
+    JobListFragment jobListFragment=new JobListFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         fragmentManager.beginTransaction().add(R.id.content_frame, new HomeFragment(), "homeFrag").addToBackStack("fragBack").commit();
+        //fragmentManager.beginTransaction().add(R.id.job_list_frame, jobListFragment, "jobList").addToBackStack("jobStack").commit();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -45,6 +50,7 @@ public class HomeScreen extends AppCompatActivity
         else if(fragmentManager.findFragmentByTag("homeFrag") == null){
             fragmentManager.popBackStack();
             fragmentManager.beginTransaction().add(R.id.content_frame, new HomeFragment(), "homeFrag").addToBackStack("fragBack").commit();
+            //fragmentManager.beginTransaction().add(R.id.job_list_frame, jobListFragment, "jobList").addToBackStack("fragBack").commit();
         }
         else {
             super.onBackPressed();
@@ -81,7 +87,9 @@ public class HomeScreen extends AppCompatActivity
         if (id == R.id.nav_all_ads_layout) {
             fragmentManager.popBackStack();
             fragmentManager.beginTransaction().add(R.id.content_frame, new HomeFragment(), "homeFrag").addToBackStack("fragBack").commit();
+            //fragmentManager.beginTransaction().add(R.id.job_list_frame, jobListFragment, "jobList").addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_post_ad_layout) {
+            //fragmentManager.beginTransaction().remove(jobListFragment).commit();
             fragmentManager.popBackStack();
             fragmentManager.beginTransaction().add(R.id.content_frame, new PostadFragment()).addToBackStack("fragBack").commit();
         } else if (id == R.id.nav_profile_layout) {
